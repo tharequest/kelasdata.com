@@ -23,11 +23,11 @@ export default function Header() {
     <div className="flex gap-4 items-center text-gray-600">
       <span className="flex items-center gap-2">
         <i className="fa-solid fa-phone"></i>
-        081355904897
+        08xxxxxxxx
       </span>
       <span className="flex items-center gap-2">
         <i className="fa-solid fa-envelope"></i>
-        layanan@kelasdata.co.id
+        kelas@data.com
       </span>
     </div>
 
@@ -46,19 +46,20 @@ export default function Header() {
 
 
       {/* WRAPPER STICKY */}
-      <div className="sticky top-4 z-50">
-        {/* FLOATING HEADER */}
-        <div
-          className={`
-            transition-all duration-300 ease-out
-            ${
-              scrolled
-                ? "mt-4 max-w-6xl rounded-2xl bg-white/80 backdrop-blur-xl shadow-xl"
-                : "mt-0 max-w-7xl rounded-none bg-white/60 backdrop-blur-md"
-            }
-            mx-auto border border-white/30
-          `}
-        >
+      {/* WRAPPER STICKY */}
+<div className="sticky top-4 z-50">
+  {/* FLOATING HEADER */}
+  <div
+    className={`
+      transition-all duration-300 ease-out
+      mx-auto border border-white/30
+      ${
+        scrolled
+          ? "max-w-6xl mt-2 rounded-2xl bg-white/80 backdrop-blur-xl shadow-xl"
+          : "max-w-7xl mt-0 rounded-none bg-white/60 backdrop-blur-md"
+      }
+    `}
+  >
           <div
             className={`
               px-6 flex items-center justify-between transition-all duration-300

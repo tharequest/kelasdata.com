@@ -10,17 +10,30 @@ export default function Header() {
       {/* TOP BAR */}
       <div className="w-full bg-white/70 backdrop-blur border-b border-white/30 text-sm">
         <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
+          
           {/* Contact */}
-          <div className="flex gap-4 text-gray-600">
-            <span>📞 081355904897</span>
-            <span>✉️ layanan@kelasdata.co.id</span>
+          <div className="flex gap-4 text-gray-600 items-center">
+            <span className="flex items-center gap-1">
+              <span className="material-symbols-outlined text-base">call</span>
+              081355904897
+            </span>
+            <span className="flex items-center gap-1">
+              <span className="material-symbols-outlined text-base">mail</span>
+              layanan@kelasdata.co.id
+            </span>
           </div>
 
           {/* Social & Language */}
           <div className="flex items-center gap-4">
-            <a href="#" className="hover:opacity-70">🌐</a>
-            <a href="#" className="hover:opacity-70">📘</a>
-            <a href="#" className="hover:opacity-70">🐦</a>
+            <span className="material-symbols-outlined cursor-pointer">
+              public
+            </span>
+            <span className="material-symbols-outlined cursor-pointer">
+              facebook
+            </span>
+            <span className="material-symbols-outlined cursor-pointer">
+              twitter
+            </span>
 
             <select
               value={lang}
@@ -37,12 +50,13 @@ export default function Header() {
       {/* MAIN HEADER */}
       <div className="bg-white/60 backdrop-blur-xl border-b border-white/30 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          
           {/* Logo */}
-          <h1 className="text-xl font-bold">Logo KelasData</h1>
+          <h1 className="text-xl font-bold">KelasData</h1>
 
           {/* Menu */}
           <nav className="hidden md:flex gap-6 text-sm font-medium">
-            {/* <a href="#" className="hover:text-blue-600">Home</a> */}
+            <a href="#" className="hover:text-blue-600">Home</a>
             <a href="#" className="hover:text-blue-600">Kursus</a>
             <a href="#" className="hover:text-blue-600">Ebook</a>
             <a href="#" className="hover:text-blue-600">Tentang</a>
@@ -50,6 +64,7 @@ export default function Header() {
 
           {/* Actions */}
           <div className="flex items-center gap-3">
+            
             {/* Search */}
             <input
               type="text"
@@ -59,7 +74,9 @@ export default function Header() {
 
             {/* Cart */}
             <button className="relative">
-              🛒
+              <span className="material-symbols-outlined text-2xl">
+                shopping_cart
+              </span>
               <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
                 0
               </span>

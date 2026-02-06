@@ -3,7 +3,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50">
       {/* Navbar */}
       <nav className="bg-white shadow-sm p-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold">EduPlatform</h1>
+        <h1 className="text-xl font-bold">Kelasdata</h1>
         <div className="space-x-4">
           <button className="text-gray-600">Home</button>
           <button className="text-gray-600">Kursus</button>

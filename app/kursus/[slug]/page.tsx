@@ -6,7 +6,7 @@ export default function KursusDetailPage({ params }: Props) {
   return (
     <main className="pt-40 p-10">
       {/* HERO */}
-      <section className="bg-gradient-to-r from-indigo-600 to-purple-600
+      <section className="bg-gradient-to-r from-indigo-600 to-blue-600
                           text-white p-10 rounded-2xl mb-10">
         <h1 className="text-3xl font-bold mb-4">
           Master Class Data Exploration Using R Studio

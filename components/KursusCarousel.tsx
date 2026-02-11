@@ -1,15 +1,27 @@
 "use client";
 
+import { useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { useRef } from "react";
+import KursusCard from "@/components/KursusCard";
 
 const courses = [
-  { id: 1, title: "Belajar Data Analyst", price: "Rp 849.000" },
-  { id: 2, title: "Belajar Power BI", price: "Rp 499.000" },
-  { id: 3, title: "Hatam Aplikasi Statistika", price: "Rp 1.129.000" },
-  { id: 4, title: "Belajar Content Creator", price: "Rp 249.000" },
-  { id: 5, title: "Digital Marketing", price: "Rp 99.000" },
+  {
+    slug: "master-class-data-exploration",
+    title: "Master Class Data Exploration Using R Studio",
+    price: "Rp 1.200.000",
+    lessons: 68,
+    duration: "20:12:10 Jam",
+    level: "Pemula",
+  },
+  {
+    slug: "data-analyst-basic",
+    title: "Data Analyst untuk Pemula",
+    price: "Rp 799.000",
+    lessons: 42,
+    duration: "12:45:00 Jam",
+    level: "Pemula",
+  },
 ];
 
 export default function KursusCarousel() {
@@ -27,30 +39,27 @@ export default function KursusCarousel() {
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex gap-6">
           {courses.map((course) => (
-            <div
-              key={course.id}
-              className="min-w-[280px] bg-white rounded-2xl shadow p-4 transition hover:-translate-y-1 hover:shadow-lg"
-            >
-              <div className="h-40 bg-gray-200 rounded-xl mb-4" />
-              <h4 className="font-semibold mb-1">{course.title}</h4>
-              <span className="font-bold">{course.price}</span>
-            </div>
+            <KursusCard key={course.slug} {...course} />
           ))}
         </div>
       </div>
 
-      {/* Prev */}
+      {/* PREV */}
       <button
         onClick={() => emblaApi?.scrollPrev()}
-        className="absolute -left-4 top-1/2 -translate-y-1/2 bg-white shadow rounded-full w-10 h-10 flex items-center justify-center"
+        className="absolute -left-4 top-1/2 -translate-y-1/2
+                   bg-white shadow rounded-full w-10 h-10
+                   flex items-center justify-center"
       >
         ‹
       </button>
 
-      {/* Next */}
+      {/* NEXT */}
       <button
         onClick={() => emblaApi?.scrollNext()}
-        className="absolute -right-4 top-1/2 -translate-y-1/2 bg-white shadow rounded-full w-10 h-10 flex items-center justify-center"
+        className="absolute -right-4 top-1/2 -translate-y-1/2
+                   bg-white shadow rounded-full w-10 h-10
+                   flex items-center justify-center"
       >
         ›
       </button>

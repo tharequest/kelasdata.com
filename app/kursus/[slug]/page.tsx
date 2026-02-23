@@ -13,7 +13,7 @@ export default function KursusDetailPage({ params }: Props) {
         </h1>
         <p className="max-w-3xl">
           Kelas online terbaru yang dirancang untuk membantu peserta
-          mengeksplorasi berbagai jenis data secara praktis.
+          mengeksplorasi berbagai jenis data secara praktis dan mudah dipahami.
         </p>
       </section>
 
